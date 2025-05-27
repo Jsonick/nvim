@@ -1,36 +1,34 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-	auto_install = true,
-	ensure_installed = {
-      "bash",
-      "c",
-      "diff",
-      "html",
-      "javascript",
-      "jsdoc",
-      "json",
-      "jsonc",
-      "lua",
-      "luadoc",
-      "luap",
-      "markdown",
-      "markdown_inline",
-      "printf",
-      "python",
-      "query",
-      "regex",
-      "toml",
-      "tsx",
-      "typescript",
-      "vim",
-      "vimdoc",
-      "xml",
-      "yaml",
-    },
-	highlight={
-		enable = true,	
-	},
-    },
+
+    config = function()
+        require("nvim-treesitter.configs").setup({
+            ensure_installed = {
+              "bash",
+              "c",
+              "rust",
+              "cpp",
+              "html",
+              "javascript",
+              "lua",
+              "luadoc",
+              "luap",
+              "markdown",
+              "markdown_inline",
+              "python",
+              "toml",
+              "typescript",
+              "vim",
+              "vimdoc",
+              "xml",
+              "yaml",
+              "query"
+            },
+	        auto_install = true,
+	        highlight = {
+	        	enable = true,	
+	        },
+        })
+    end,
 
 }
