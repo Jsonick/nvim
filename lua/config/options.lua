@@ -21,3 +21,5 @@ vim.opt.inccommand = "split" -- e.g. in :%s...
 
 vim.opt.termguicolors = true
 
+vim.g.mapleader = " " -- g --> vim global variable (not lua global)
+
